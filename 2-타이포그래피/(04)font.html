@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FONT</title> 
+  <style>
+    p {
+      font-size: 1rem;
+      font-family: Arial, Helvetica, Calibri, sans-serif;
+      line-height: 1.5;
+    }
+    #serif {font-family: serif;}
+    #sans-serif {font-family: sans-serif;}
+    #cursive {font-family: cursive;}
+    #fantasy {font-family: fantasy;}
+    #monospace {font-family: monospace;}
+  </style>
+</head>
+<body>
+  <p>
+    font-family에서 여러 폰트를 쓰는 것은 사용자의 컴퓨터에 해당 폰트가 깔려 있지 않은 경우를 대비해, <br/>
+    Arial 폰트가 없다면 Helvetica 폰트를 써서 나타내고, 만약 Helvetica 폰트도 없다면 Calibri 폰트를 써서 나타내라는 말 <br/>
+    폰트 이름에 띄어쓰기가 들어가면 ""로 묶어야 한다. <br/>
+    마지막 폰트는 serif/sans-serif 등의 포괄적인 폰트로 지정(아래 목록 참고)
+  </p>
+  <ul>
+    <li id="serif">serif 장식이 있는 폰트</li>
+    <li id="sans-serif">sans-serif 장식이 없는 폰트</li>
+    <li id="cursive">cursive 흘림체</li>
+    <li id="fantasy">fantasy 판타지</li>
+    <li id="monospace">monospace 고정폭</li>
+  </ul>
+  </p>
+  <p>
+    line-height는 줄간격을 의미한다. 기본값은 1.2 <br/>
+    이것도 px로 입력하면 폰트 크기에 상관없이 고정값을 지니므로 사용하지 않는 것을 권한다.
+  </p>
+  <p>
+    font는 다양한 명령문을 한데 모아 입력하는 것인데 순서를 지켜야 한다. <br/>
+    font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit; <br/>
+    <strong>이 중에서 font-size와 font-family는 필수로 포함되어야 하는 정보</strong>
+  </p>
+</body>
+</html>
