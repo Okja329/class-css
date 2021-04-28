@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative static</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {border: 1px solid gray;}
+        body {font-family: 'Nanum Myeongjo', serif;}
+        div {
+            border: 5px solid tomato;
+            margin: 10px;
+        }
+        #parent, #me {
+            font-size: 20px;
+        }
+        #me {
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="other">
+        <h1>
+            STATIC vs RELATIVE
+        </h1>
+    </div>
+    <div id="parent">
+        position의 기본값은 static으로, '고정적인'이라는 뜻 <br/>
+        relative는 '상대적인'이라는 뜻
+        <div id="me">
+            <strong>position: relative 상태에서의 우선순위</strong> <br/>
+            left vs right : left 우선 <br/>
+            top vs bottom : top 우선
+        </div>
+    </div>
+</body>
+</html>
