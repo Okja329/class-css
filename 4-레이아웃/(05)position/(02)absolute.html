@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'East Sea Dokdo', cursive;
+            font-size: 1.5rem;
+        }
+        #parent, #other {
+            border: 5px solid tomato;
+        }
+        #parent {
+            position: relative;
+        }
+        #me {
+            background-color: purple;
+            color: white;
+            position: absolute;
+            /* width: 200px;
+            height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="other">
+        absolute position
+    </div>
+    <div id="parent">
+        absolute 포지션이란?
+        <div id="me">
+            <p>
+                부모가 아닌 html 엘리먼트를 기준으로 배치를 설정하는 경우에 position: absolute 처리하면 된다. <br/>
+            이후 left 및 top 값을 0으로 주면 화면 왼쪽 상단에 붙게 된다. <br/>
+            다만, left 또는 top 값을 아예 안 주는 경우에는 기준이 부모 엘리먼트가 된다. <br/>
+            기본값은 자기가 원래 있어야 하는 곳이며, 별도의 값을 주면 그제서야 html 기준이 되는 것
+            </p>
+            <p>
+                또한, position: absolute가 되면 그 엘리먼트는 더 이상 부모의 소속이 아니다. <br/>
+                그렇기 때문에 크기 자체도 부모의 크기가 아닌 자신의 본래 크기가 된다.
+            </p>
+            <p>
+                (심화) <br/>
+                여기서 부모 엘리먼트를 position: relative로 하고, #me의 left/top 값을 주게 되면 #me의 배치 기준은 다시 부모 엘리먼트가 된다. <br/>
+                <q>absolute는 static이 아닌 부모가 나타날 때까지 무시하다가 static이 아닌 부모가 나타나면 그 부모의 위치를 기준으로 offset 값을 지정한다.</q> 
+            </p>
+            <!-- me -->
+        </div>
+    </div>
+</body>
+</html>
