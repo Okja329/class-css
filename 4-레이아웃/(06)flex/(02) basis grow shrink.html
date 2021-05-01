@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gothic A1', sans-serif;
+        }
+        .container {
+            background-color: powderblue;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+        .item {
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+
+        }
+        .item:nth-child(1) {
+            flex-basis: 300px;
+            flex-shrink: 1;
+        }
+        .item:nth-child(2) {
+            flex-basis: 300px;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <dl>
+        <dt>
+            flex-basis
+        </dt>
+        <dd>
+            해당 item의 규모, container의 flex-direction 값이 row(길이 기본값)인지 column(높이 기본값)인지에 따라 모양이 다르다.
+        </dd>
+        <dt>
+            flex-grow
+        </dt>
+        <dd>
+            기본 설정값은 0으로 자기 본래의 크기만큼 차지하는데, 1로 설정하면 container의 크기에 맞춰 item들이 동일한 분량으로 늘어나며 꽉 차게 된다. <br/>
+            만약 어떤 특정 item에 2로 값을 주고 나머지는 1을 주면,  나머지는 동일하게 1의 크기가 되고 특정 item만 그의 2배 크기가 된다. <br/>
+            item에는 flex-grow: 0으로 설정하고, 특정 item에만 flex-grow: 2로 설정하는 것도 가능
+        </dd>
+        <dt>
+            flex-shrink
+        </dt>
+        <dd>
+            화면이 container의 크기보다 줄어들 때 얼만큼 줄어드냐에 관한 내용 <br/>
+            특정 item의 flex-basis 값이 있다는 전제 하에 어느정도까지 크기가 줄어들 것인지에 관한 내용으로, 0으로 설정하면 화면 크기가 작아져도 나는 0만큼 줄어들 것이다라는 의미를 갖게 된다. <br/>
+            flex-basis값을 가진 item이 여러 개인 경우, 위 코드와 같이 설정하면 2번(flex-shrink: 2)이 1번(flex-shrink: 1)보다 2배 더 빠르게 작아진다. 
+        </dd>
+    </dl>
+</body>
+</html>
